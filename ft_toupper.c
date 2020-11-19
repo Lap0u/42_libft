@@ -6,9 +6,11 @@
 /*   By: cbeaurai <cbeaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 23:22:31 by cbeaurai          #+#    #+#             */
-/*   Updated: 2020/11/18 23:33:01 by cbeaurai         ###   ########.fr       */
+/*   Updated: 2020/11/19 18:06:34 by cbeaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

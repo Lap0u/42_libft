@@ -6,20 +6,34 @@
 /*   By: cbeaurai <cbeaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 23:34:38 by cbeaurai          #+#    #+#             */
-/*   Updated: 2020/11/18 23:35:20 by cbeaurai         ###   ########.fr       */
+/*   Updated: 2020/11/19 19:12:21 by cbeaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar_fd(char c, int fd)
-{
-	write(fd, &c, fd);
-}
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	while (n >= 10)
-		ft_putnbr_fd(n / 10, fd);
-	ft_putchar_fd(fd, n + 0, 1);
+	if (n == -2147483648)
+		write(fd, "-2147483648", 11);
+	else
+	{
+		if (n == 0)
+		{
+			write(fd, "0", 1);
+			return;
+		}
+		if (n < 0)
+		{
+			write(fd, "-", 1);
+			n = -n;
+		}
+		if (n >= 10)
+		{
+			ft_putnbr_fd(n / 10, fd);
+			ft_putchar_fd(n % 10 + '0', fd);
+		}
+		else 
+			ft_putchar_fd(n + '0', fd);
+	}
 }

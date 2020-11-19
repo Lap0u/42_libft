@@ -6,9 +6,11 @@
 /*   By: cbeaurai <cbeaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 23:15:23 by cbeaurai          #+#    #+#             */
-/*   Updated: 2020/11/19 02:17:24 by cbeaurai         ###   ########.fr       */
+/*   Updated: 2020/11/19 17:54:44 by cbeaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {

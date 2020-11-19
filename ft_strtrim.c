@@ -6,11 +6,11 @@
 /*   By: cbeaurai <cbeaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 23:22:00 by cbeaurai          #+#    #+#             */
-/*   Updated: 2020/11/19 01:24:27 by cbeaurai         ###   ########.fr       */
+/*   Updated: 2020/11/19 18:05:50 by cbeaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 int		ft_check_str(const char *str, char c)
 {

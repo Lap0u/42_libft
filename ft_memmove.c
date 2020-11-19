@@ -6,29 +6,35 @@
 /*   By: cbeaurai <cbeaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 23:17:19 by cbeaurai          #+#    #+#             */
-/*   Updated: 2020/11/19 01:10:27 by cbeaurai         ###   ########.fr       */
+/*   Updated: 2020/11/19 19:08:15 by cbeaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
-{
-	int i;
+#include "libft.h"
 
+void	*ft_memmove(void *dst, const void *src, size_t len)
+{
+	size_t i;
+	char *dst_prim;
+	char *src_prim;
+
+	src_prim = (char*)src;
+	dst_prim = (char*)dst;
 	i = 0;
-	if (&dest > &src)
+	if (&dst_prim[i] > &src_prim[i])
 	{
-		n -= 1;
-		while (n >= 0)
+		len -= 1;
+		while (len >= 0)
 		{
-			dest[n] = src[n];
-			n--;
+			dst_prim[len] = src_prim[len];
+			len--;
 		}
 	}
 	else
-		while (i < n)
+		while (i < len)
 		{
-			dest[i] = src[i];
+			dst_prim[i] = src_prim[i];
 			i++;
 		}
-	return (dest);
+	return (dst);
 }

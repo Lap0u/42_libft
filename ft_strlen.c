@@ -6,11 +6,13 @@
 /*   By: cbeaurai <cbeaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 23:20:01 by cbeaurai          #+#    #+#             */
-/*   Updated: 2020/11/18 23:31:34 by cbeaurai         ###   ########.fr       */
+/*   Updated: 2020/11/19 18:25:43 by cbeaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include "libft.h"
+
+int	ft_strlen(const char *str)
 {
 	int i;
 

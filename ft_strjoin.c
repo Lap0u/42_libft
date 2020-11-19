@@ -6,11 +6,11 @@
 /*   By: cbeaurai <cbeaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 23:19:03 by cbeaurai          #+#    #+#             */
-/*   Updated: 2020/11/19 01:18:12 by cbeaurai         ###   ########.fr       */
+/*   Updated: 2020/11/19 18:00:30 by cbeaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -30,9 +30,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	j = -1;
 	while (s1[++i])
 		news[i] = s1[i];
-	i--;
 	while (s2[++j])
 		news[i + j] = s2[j];
-	news[j + i - 1] = '\0';
+	news[j + i] = '\0';
 	return (news);
 }

@@ -6,11 +6,11 @@
 /*   By: cbeaurai <cbeaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 23:18:53 by cbeaurai          #+#    #+#             */
-/*   Updated: 2020/11/19 01:19:49 by cbeaurai         ###   ########.fr       */
+/*   Updated: 2020/11/19 18:00:16 by cbeaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {

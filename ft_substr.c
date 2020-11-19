@@ -6,15 +6,15 @@
 /*   By: cbeaurai <cbeaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 23:22:11 by cbeaurai          #+#    #+#             */
-/*   Updated: 2020/11/19 01:25:38 by cbeaurai         ###   ########.fr       */
+/*   Updated: 2020/11/19 19:10:29 by cbeaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int		i;
+	size_t	i;
 	char	*news;
 
 	i = 0;

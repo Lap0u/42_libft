@@ -6,11 +6,11 @@
 /*   By: cbeaurai <cbeaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 23:18:36 by cbeaurai          #+#    #+#             */
-/*   Updated: 2020/11/19 01:09:39 by cbeaurai         ###   ########.fr       */
+/*   Updated: 2020/11/19 18:58:44 by cbeaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 int		ft_len_next_sep(const char *str, char c, int start)
 {
@@ -59,7 +59,7 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	if (!(news = malloc(sizeof((char*)* ft_word_count(s, c) + 1))))
+	if (!(news = malloc(sizeof((char*) * (ft_word_count(s, c) + 1)))))
 		return (NULL);
 	while (j < ft_word_count(s, c))
 	{

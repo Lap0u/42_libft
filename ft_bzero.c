@@ -6,18 +6,23 @@
 /*   By: cbeaurai <cbeaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 23:12:53 by cbeaurai          #+#    #+#             */
-/*   Updated: 2020/11/19 02:08:02 by cbeaurai         ###   ########.fr       */
+/*   Updated: 2020/11/19 19:06:32 by cbeaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	bzero(void *s, size_t n)
 {
-	int i;
+	size_t i;
 
+	char	*s_prim;
+
+	s_prim = (char *)s;
 	i = 0;
 	while (i < n)
 	{
-		s[i] = 0;
+		*(s_prim + i)= 0;
 		i++;
 	}
 }

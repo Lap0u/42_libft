@@ -6,9 +6,11 @@
 /*   By: cbeaurai <cbeaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 23:14:21 by cbeaurai          #+#    #+#             */
-/*   Updated: 2020/11/19 02:06:29 by cbeaurai         ###   ########.fr       */
+/*   Updated: 2020/11/19 17:52:44 by cbeaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

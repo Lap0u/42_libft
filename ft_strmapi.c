@@ -6,20 +6,11 @@
 /*   By: cbeaurai <cbeaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 01:12:46 by cbeaurai          #+#    #+#             */
-/*   Updated: 2020/11/19 01:13:14 by cbeaurai         ###   ########.fr       */
+/*   Updated: 2020/11/19 19:13:08 by cbeaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-int		ft_strlen(const char *str)
-{
-	int i;
-
-	while (str[i])
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
