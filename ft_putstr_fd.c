@@ -6,7 +6,7 @@
 /*   By: cbeaurai <cbeaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 23:18:26 by cbeaurai          #+#    #+#             */
-/*   Updated: 2020/11/19 19:12:38 by cbeaurai         ###   ########.fr       */
+/*   Updated: 2020/11/19 23:13:20 by cbeaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,4 @@ void	ft_putstr_fd(char *s, int fd)
 		ft_putchar_fd(s[i], fd);
 		i++;
 	}
-}
-
-int main()
-{
-	ft_putstr_fd("alz", 1);
-	return 0;
 }

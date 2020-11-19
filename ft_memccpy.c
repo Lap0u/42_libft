@@ -6,7 +6,7 @@
 /*   By: cbeaurai <cbeaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 23:16:22 by cbeaurai          #+#    #+#             */
-/*   Updated: 2020/11/19 19:07:27 by cbeaurai         ###   ########.fr       */
+/*   Updated: 2020/11/19 23:22:37 by cbeaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	size_t i;
-	char *src_prim;
+	size_t	i;
+	char	*src_prim;
 
 	src_prim = (char*)src;
 	i = 0;

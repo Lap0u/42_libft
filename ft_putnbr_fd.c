@@ -6,7 +6,7 @@
 /*   By: cbeaurai <cbeaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 23:34:38 by cbeaurai          #+#    #+#             */
-/*   Updated: 2020/11/19 19:12:21 by cbeaurai         ###   ########.fr       */
+/*   Updated: 2020/11/19 23:11:33 by cbeaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_putnbr_fd(int n, int fd)
 		if (n == 0)
 		{
 			write(fd, "0", 1);
-			return;
+			return ;
 		}
 		if (n < 0)
 		{
@@ -33,7 +33,7 @@ void	ft_putnbr_fd(int n, int fd)
 			ft_putnbr_fd(n / 10, fd);
 			ft_putchar_fd(n % 10 + '0', fd);
 		}
-		else 
+		else
 			ft_putchar_fd(n + '0', fd);
 	}
 }
