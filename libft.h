@@ -3,15 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbeaurai </var/mail/cbeaurai>              +#+  +:+       +#+        */
+/*   By: cbeaurai <cbeaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/19 22:56:49 by cbeaurai          #+#    #+#             */
-/*   Updated: 2020/11/20 00:22:16 by cbeaurai         ###   ########.fr       */
+/*   Created: 2020/11/20 11:58:29 by cbeaurai          #+#    #+#             */
+/*   Updated: 2020/11/20 20:26:56 by cbeaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
+#ifndef LIBFT_H
+# define LIBFT_H
+
+# include <unistd.h>
+# include <stdlib.h>
 
 int		ft_isalnum(int c);
 
@@ -53,6 +56,8 @@ void	ft_putnbr_fd(int n, int fd);
 
 void	ft_putstr_fd(char *s, int fd);
 
+char	**ft_split(char const *s, char c);
+
 char	*ft_strchr(const char *s, int c);
 
 char	*ft_strdup(const char *s1);
@@ -78,3 +83,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_toupper(int c);
 
 int		ft_tolower(int c);
+
+#endif

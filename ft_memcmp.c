@@ -6,7 +6,7 @@
 /*   By: cbeaurai <cbeaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 23:16:46 by cbeaurai          #+#    #+#             */
-/*   Updated: 2020/11/19 23:13:47 by cbeaurai         ###   ########.fr       */
+/*   Updated: 2020/11/20 14:58:27 by cbeaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
-	char	*s1_prim;
-	char	*s2_prim;
+	size_t			i;
+	unsigned char	*s1_prim;
+	unsigned char	*s2_prim;
 
-	s1_prim = (char*)s1;
-	s2_prim = (char*)s2;
+	s1_prim = (unsigned char*)s1;
+	s2_prim = (unsigned char*)s2;
 	i = 0;
 	while (i < n)
 	{

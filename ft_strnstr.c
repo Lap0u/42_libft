@@ -6,7 +6,7 @@
 /*   By: cbeaurai <cbeaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 23:21:00 by cbeaurai          #+#    #+#             */
-/*   Updated: 2020/11/19 19:10:17 by cbeaurai         ###   ########.fr       */
+/*   Updated: 2020/11/20 17:37:28 by cbeaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	while (i < len)
 	{
 		j = 0;
-		while (little[j] == big[j + i])
+		while (little[j] == big[j + i] && i + j < len)
 		{
 			j++;
 			if (little[j] == '\0')

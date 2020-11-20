@@ -6,7 +6,7 @@
 /*   By: cbeaurai <cbeaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 23:17:19 by cbeaurai          #+#    #+#             */
-/*   Updated: 2020/11/19 23:11:05 by cbeaurai         ###   ########.fr       */
+/*   Updated: 2020/11/20 17:47:00 by cbeaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
+	int		i;
 	char	*dst_prim;
 	char	*src_prim;
 
@@ -23,15 +23,15 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	i = 0;
 	if (&dst_prim[i] > &src_prim[i])
 	{
-		len -= 1;
-		while (len >= 0)
+		i = len - 1;
+		while (i >= 0)
 		{
-			dst_prim[len] = src_prim[len];
-			len--;
+			dst_prim[i] = src_prim[i];
+			i--;
 		}
 	}
 	else
-		while (i < len)
+		while (i < (int)len)
 		{
 			dst_prim[i] = src_prim[i];
 			i++;
