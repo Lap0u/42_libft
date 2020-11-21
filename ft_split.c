@@ -6,7 +6,7 @@
 /*   By: cbeaurai <cbeaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 23:18:36 by cbeaurai          #+#    #+#             */
-/*   Updated: 2020/11/20 21:31:16 by cbeaurai         ###   ########.fr       */
+/*   Updated: 2020/11/20 23:11:26 by cbeaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,16 +76,6 @@ char	**ft_split(char const *s, char c)
 		i += cmpt;
 		news[j++][cmpt] = '\0';
 	}
+	news[j] = NULL;
 	return (news);
 }
-/*
-int main()
-{
-	char **s;
-	char sep = 'm';
-	char *s1;
-
-	s1 = "azejazeazi";
-	s = ft_split(s1, sep);
-	return (0);
-}*/

@@ -6,7 +6,7 @@
 /*   By: cbeaurai <cbeaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 23:22:00 by cbeaurai          #+#    #+#             */
-/*   Updated: 2020/11/19 18:05:50 by cbeaurai         ###   ########.fr       */
+/*   Updated: 2020/11/21 00:43:14 by cbeaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,11 @@ int		ft_char_count(const char *s1, const char *set)
 	end = 0;
 	while (ft_check_str(set, s1[start]) && s1[start])
 		start++;
+	if (s1[start] == '\0')
+		return (0);
 	while (s1[end])
 		end++;
-	while (ft_check_str(set, s1[start]) && end >= 0)
+	while (ft_check_str(set, s1[end - 1]) && end >= 0)
 		end--;
 	return (end - start);
 }

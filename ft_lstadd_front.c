@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbeaurai <cbeaurai@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cbeaurai </var/mail/cbeaurai>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/19 01:12:46 by cbeaurai          #+#    #+#             */
-/*   Updated: 2020/11/20 23:55:16 by cbeaurai         ###   ########.fr       */
+/*   Created: 2020/11/21 12:34:59 by cbeaurai          #+#    #+#             */
+/*   Updated: 2020/11/21 14:53:37 by cbeaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
-{
-	char	*news;
-	int		i;
+void	ft_lastadd_front(t_list **alst, t_list *new)
 
-	i = 0;
-	if (!(news = malloc(sizeof(char) * ft_strlen(s) + 1)))
-		return (NULL);
-	while (i < ft_strlen(s))
+{
+	if (alst && new)
 	{
-		news[i] = f(i, s[i]);
-		i++;
+		new->next = *alst;
+		*alst = new;
 	}
-	news[i] = '\0';
-	return (news);
+	return ();
 }
