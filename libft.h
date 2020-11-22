@@ -6,7 +6,7 @@
 /*   By: cbeaurai <cbeaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 11:58:29 by cbeaurai          #+#    #+#             */
-/*   Updated: 2020/11/21 00:56:03 by cbeaurai         ###   ########.fr       */
+/*   Updated: 2020/11/23 00:16:01 by cbeaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+
+typedef struct	s_list
+{
+	void		*content;
+	struct		s_list *next;
+}				t_list;
 
 int		ft_isalnum(int c);
 

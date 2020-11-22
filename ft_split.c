@@ -6,7 +6,7 @@
 /*   By: cbeaurai <cbeaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 23:18:36 by cbeaurai          #+#    #+#             */
-/*   Updated: 2020/11/20 23:11:26 by cbeaurai         ###   ########.fr       */
+/*   Updated: 2020/11/23 00:13:52 by cbeaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,6 @@ char	**ft_split(char const *s, char c)
 	char	**news;
 	int		i;
 	int		j;
-	int		cmpt;
 
 	i = 0;
 	j = 0;
@@ -66,15 +65,15 @@ char	**ft_split(char const *s, char c)
 	{
 		i = ft_set_next(s, c, i);
 		if (!(news[j] = malloc(sizeof(char) * ft_len_next_sep(s, c, i) + 1)))
-			return (NULL);
-		cmpt = 0;
-		while (cmpt < ft_len_next_sep(s, c, i))
 		{
-			news[j][cmpt] = s[cmpt + i];
-			cmpt++;
+			while (--j >= 0)
+				free(news[j]);
+			free(news);
+			return (NULL);
 		}
-		i += cmpt;
-		news[j++][cmpt] = '\0';
+		ft_strlcpy(news[j], &s[i], ft_len_next_sep(s, c, i) + 1);
+		i += ft_len_next_sep(s, c, i);
+		j++;
 	}
 	news[j] = NULL;
 	return (news);

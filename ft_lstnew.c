@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbeaurai </var/mail/cbeaurai>              +#+  +:+       +#+        */
+/*   By: cbeaurai <cbeaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/21 12:22:46 by cbeaurai          #+#    #+#             */
-/*   Updated: 2020/11/21 14:48:58 by cbeaurai         ###   ########.fr       */
+/*   Created: 2020/11/22 18:29:24 by cbeaurai          #+#    #+#             */
+/*   Updated: 2020/11/23 00:11:52 by cbeaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list newl;
-	if (!(newl = malloc(sizeof(t_list))))
+	t_list *newt;
+
+	if (!(newt = malloc(sizeof(t_list))))
 		return (NULL);
-	newl.content = content;
-	newl.next = NULL;
-	return (newl);
+	newt->content = content;
+	newt->next = NULL;
+	return (newt);
 }

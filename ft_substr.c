@@ -18,9 +18,16 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*news;
 
 	i = 0;
-	while (s[i])
+	if (start > len)
+	{
+		if (!(news = malloc(sizeof(char) * 1)))
+			return (NULL);
+		news[0] = '\0';
+		return (news);
+	}
+	while (s[i] && i < len)
 		i++;
-	if (!(news = malloc(sizeof(char) * (i - start) + 1)))
+	if (!(news = malloc(sizeof(char) * (i - start) + 2)))
 		return (NULL);
 	i = 0;
 	while (i < len && s[i + start])

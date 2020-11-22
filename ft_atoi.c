@@ -6,7 +6,7 @@
 /*   By: cbeaurai <cbeaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 23:14:21 by cbeaurai          #+#    #+#             */
-/*   Updated: 2020/11/20 12:54:33 by cbeaurai         ###   ########.fr       */
+/*   Updated: 2020/11/23 00:08:30 by cbeaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	int i;
-	int neg;
-	int res;
+	int			i;
+	int			neg;
+	long int	res;
 
 	i = 0;
 	neg = 1;
