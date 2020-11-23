@@ -6,7 +6,7 @@
 #    By: cbeaurai <cbeaurai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 00:02:15 by cbeaurai          #+#    #+#              #
-#    Updated: 2020/11/23 00:02:17 by cbeaurai         ###   ########.fr        #
+#    Updated: 2020/11/23 17:31:39 by cbeaurai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,26 +20,41 @@ SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 	  ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c ft_split.c ft_strjoin.c \
 	  ft_strmapi.c ft_strtrim.c ft_substr.c
 
+SRCBONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
+	   	ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
+		ft_lstmap.c
+
+OBJS	= $(SRC:.c=.o)
+
+OBJB	= $(SRCBONUS:.c=.o)
+
 CC = clang
 
 CFLAGS = -Wall -Werror -Wextra 
 
-all: $(NAME)
+ARRCS	= ar rcs
 
-$(NAME): lib
-	$(CC) -o $(CFLAGS) $(NAME) $(SRC)
+RM	= rm -f
+
+all: ${NAME}
+
+.c.o:
+			${CC} ${CFLAGS} -c $< -o $(<:.c=.o)
+
+$(NAME): ${OBJS}
+			${ARRCS} ${NAME} ${OBJS} 
 
 clean:
-	/bin/rm -f *.o
+			${RM} ${OBJS} ${OBJB}
 
 fclean: clean
-	/bin/rm -f $(NAME)
+			${RM} ${NAME}
 
 re: fclean all
 
-lib:
-	gcc -c *.c 
-		ar rc $(NAME) *.o 
-		ranlib $(NAME)
+bonus :	${OBJS} ${OBJB}
+			${ARRCS} ${NAME} ${OBJS} ${OBJB}
 
-bonus :
+rebonus: fclean bonus
+
+.PHONY: all re clean fclean lib

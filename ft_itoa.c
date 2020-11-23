@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int		ft_pow(int nb, int power)
+static int	ft_pow(int nb, int power)
 {
 	int res;
 
@@ -25,7 +25,7 @@ int		ft_pow(int nb, int power)
 	return (res);
 }
 
-int		ft_nbr_len(int n)
+static int	ft_nbr_len(int n)
 {
 	long long int	nbr;
 	int				cmpt;
@@ -47,7 +47,7 @@ int		ft_nbr_len(int n)
 	return (cmpt);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	char	*str;
 	int		i;

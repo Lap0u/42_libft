@@ -6,20 +6,24 @@
 /*   By: cbeaurai <cbeaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 00:00:58 by cbeaurai          #+#    #+#             */
-/*   Updated: 2020/11/23 00:03:39 by cbeaurai         ###   ########.fr       */
+/*   Updated: 2020/11/23 17:43:23 by cbeaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void(*del)(void *))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list *temp;
 
 	if (!lst || !del)
-		return;
-	temp = *lst;
-	while (temp)
+		return ;
+	while (*lst)
 	{
-		temp = temp->next;
-
+		del((*lst)->content);
+		temp = *lst;
+		*lst = (*lst)->next;
+		free(temp);
+	}
+	*lst = NULL;
+}

@@ -6,7 +6,7 @@
 /*   By: cbeaurai <cbeaurai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 23:16:33 by cbeaurai          #+#    #+#             */
-/*   Updated: 2020/11/23 00:10:52 by cbeaurai         ###   ########.fr       */
+/*   Updated: 2020/11/23 17:49:12 by cbeaurai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (s_prim[i] == c)
+		if (s_prim[i] == (unsigned char)c)
 			return ((void*)s + i);
 		i++;
 	}
