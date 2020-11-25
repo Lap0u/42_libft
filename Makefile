@@ -6,7 +6,7 @@
 #    By: cbeaurai <cbeaurai@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 00:02:15 by cbeaurai          #+#    #+#              #
-#    Updated: 2020/11/23 17:31:39 by cbeaurai         ###   ########.fr        #
+#    Updated: 2020/11/25 00:52:14 by user42           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,4 +57,4 @@ bonus :	${OBJS} ${OBJB}
 
 rebonus: fclean bonus
 
-.PHONY: all re clean fclean lib
+.PHONY: all re clean fclean lib rebonus
